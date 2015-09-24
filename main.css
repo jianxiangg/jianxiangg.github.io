@@ -1,0 +1,824 @@
+/*=======================*/
+/* Navigation Bar: Begin */
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 100;
+  border-radius: 0;
+  width: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link-style li {
+  display: inline;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 50px;
+  font-family: Roboto Condensed;
+}
+
+.link-style a { 
+    color: white;
+}
+
+/* Adjusting the brand and link colors */
+
+/*.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+  text-decoration: none;
+}*/
+
+.navbar.opaque {
+  background-color: white;
+  background: white;
+  transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+  box-shadow: 0px 0px 4px #969696;
+  color: black;
+}
+
+.navbar.opaque a {
+    color:black;
+}
+
+/*.navbar.opaque li a:hover {
+  border: 1px solid black;
+}*/
+
+/* Navigation Bar: End */
+/*=====================*/
+
+
+/*====================*/
+/* Landing Page: Begin*/
+header {
+  background: url('http://40.media.tumblr.com/ebb6e1488df8733986b93fef349a3983/tumblr_nt8xews1Zf1ted1sho1_1280.jpg');
+  height: 100vh;
+  background-size: cover;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+header h3 {
+  font-family: Century Gothic;
+  font-size:20x;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+header h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 80px;
+  color: #FFFFFF;
+  margin: 0px 30px ;
+  padding: 0 10px 0 10px;
+  border: 8px solid white;
+}
+
+header h2 {
+  font-family: Droid Serif;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+header p {
+  color: white;
+  font-family: Roboto Condensed;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 40px;
+  width: 99%;
+}
+
+#arrow {
+  color: white;
+  bottom: 25px;
+  position: absolute;
+  right: 49%;
+}
+/* Landing Page: End*/
+/*==================*/
+
+
+/*====================*/
+/*Intro Segment: Begin*/
+.intro {
+  margin: auto;
+  width: 1000px;
+  padding-top: 90px;
+  padding-bottom: 60px;
+
+}
+
+.introHeadingCol {
+  width: 300px;
+  height: 525px;
+  border-right: 5px solid #25373D;
+  display: inline-block;
+}
+
+#aboutMe {
+  margin-left: 30px;
+  display: none;
+}
+
+#IAm {
+  margin-top: 130px;
+  margin-left: 180px;
+  display: none;
+}
+
+.intro h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 50px;
+  color: #25373D;
+  text-align: right;
+}
+
+.introPara {
+  width: 600px;
+  height: 500px;
+  display: inline-block;
+  vertical-align:top;
+}
+
+.aboutMePara {
+  font-family: Source Sans Pro;
+  font-size: 19px;
+  margin: 25px auto auto 0px;
+  display: none;
+}
+
+.traits ul {
+  margin-top:45px;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+
+.traits li {
+  font-family: Source Sans Pro;
+  font-size: 19px;
+  font-style: italic;
+}
+/*Intro Segment: End*/
+/*==================*/
+
+
+/*====================*/
+/*School header: Start*/
+.jumbotron2 {
+  height: 70vh;
+  background-size: cover;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('http://i.imgur.com/07t2mb2.gif');
+}
+
+.jumbotron2 h1 {
+  color: #FFFFFF;
+  font-family: Pristina;
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+
+.jumbotron2 h1:before,
+.jumbotron2 h1:after {
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 130px;
+}
+
+.jumbotron2 h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.jumbotron2 h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.jumbotron2 h2 {
+  font-family: Raleway;
+  color: #FFFFFF;
+  font-size: 47px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+.jumbotron2 h3 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 45px;
+  margin-top: 0px;
+}
+
+.jumbotron2 a {
+  text-decoration: none;
+}
+/*School header: End*/
+/*====================*/
+
+
+/*====================*/
+/*School Segment: Begin*/
+.school {
+  margin: auto;
+  width: 1000px;
+  padding-top: 95px;
+  padding-bottom: 60px;
+}
+
+.schoolHeading {
+  width: 300px;
+  height: 830px;
+  border-right: 5px solid #25373D;
+  display: inline-block;
+  color: #25373D;
+  text-align: right;
+}
+
+.schoolHeading h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 39px;
+  color: #25373D;
+  text-align: right;
+  display: none;
+}
+
+.schoolHeading h2{
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 20px;
+  color: #25373D;
+  margin-top: auto;
+  display: none;
+}
+
+.VJCHeading h1 {
+  margin-left: 100px;
+}
+
+.NUSHeading h1 {
+  margin-top: 135px;
+}
+
+.TUEHeading h1 {
+  margin-top: 160px;
+}
+
+.schoolPara {
+  width: 600px;
+  height: 750px;
+  display: inline-block;
+  vertical-align:top;
+  padding-top: 8px;
+  display: none;
+}
+
+.VJCPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  color: #25373D;
+}
+
+.school p {
+  font-family: Source Sans Pro;
+  font-size: 18px;
+}
+
+.NUSPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 50px;
+  color: #25373D;
+}
+
+.TUEPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 50px;
+  color: #25373D;
+}
+/*School Segment: End*/
+/*==================*/
+
+
+/*==================*/
+/*Work Header: Begin*/
+.jumbotron3 {
+  height: 70vh;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('http://i.imgur.com/07t2mb2.gif');
+}
+
+.jumbotron3 h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Pristina;
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+
+.jumbotron3 h1:before,
+.jumbotron3 h1:after {
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 163px;
+}
+
+.jumbotron3 h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.jumbotron3 h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.jumbotron3 h2 {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Lobster;
+  font-size: 47px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+.jumbotron3 h3 {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Cabin;
+  font-size: 41px;
+  margin-top: 1px;
+}
+
+.jumbotron3 a {
+  text-decoration: none;
+}
+/*Work Header: End*/
+/*================*/
+
+
+/*===================*/
+/*Work Segment: Begin*/
+.work {
+  margin: auto;
+  width: 1090px;
+  padding-top: 95px;
+  padding-bottom: 60px;
+}
+
+.workHeading {
+  width: 340px;
+  height: 960px;
+  border-right: 5px solid #25373D;
+  display: inline-block;
+  color: #25373D;
+  text-align: right;
+}
+
+.work h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 39px;
+  display: none;
+}
+
+.MicronHeading {
+  margin-top: 150px;
+}
+
+.TPTHeading {
+  margin-top: 185px;
+}
+
+.workHeading h2{
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 20px;
+  display: none;
+  margin-top: auto;
+}
+
+.workPara {
+  width: 600px;
+  height: 1000px;
+  display: inline-block;
+  vertical-align:top;
+  padding-top: 8px;
+}
+
+.InfineonPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  color: #25373D;
+}
+
+.MicronPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 60px;
+  color: #25373D;
+}
+
+.TPTPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 50px;
+  color: #25373D;
+}
+
+.work p, .MicronPara li  {
+  font-family: Source Sans Pro;
+  font-size: 18px;
+}
+
+/*Work Segment: End*/
+/*=================*/
+
+
+/*====================*/
+/*Skill Heading: Begin*/
+.jumbotron4 {
+  height: 70vh;
+  background-size: cover;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('http://i.imgur.com/07t2mb2.gif');
+}
+
+.jumbotron4 h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Pristina;
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+
+.jumbotron4 h1:before,
+.jumbotron4 h1:after {
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 163px;
+}
+
+.jumbotron4 h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.jumbotron4 h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.jumbotron4 h2 {
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 0px;
+  font-family: Oswald;
+  font-size: 47px;
+}
+
+.jumbotron4 h3 {
+  text-align:center;  
+  color: #FFFFFF;
+  margin-top: 0px;
+  font-family: Droid Serif;
+  font-style: Italic;
+  font-size: 41px;
+}
+
+.jumbotron4 a {
+  text-decoration: none;
+}
+/*Skill Heading: End*/
+/*==================*/
+
+
+/*====================*/
+/*Skill Segment: Begin*/
+.skills {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 1050px;
+}
+
+.skillHeading {
+  border-bottom: 5px solid #25373D;
+  width: 70%;
+  display: none;
+  margin: auto;
+}
+
+#ProgHeader {
+  margin-top: 85px;
+}
+
+#LangHeader, #OtherHeader {
+  margin-top: 40px;
+}
+
+.skillHeading h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 39px;
+  color: #25373D;
+}
+
+.skills .container {
+  width: 70%;
+  display: none;
+}
+
+.skills i {
+  margin-bottom: 10px;
+  color: #249991;
+}
+
+.skills h3 {
+  font-family: Roboto Condensed;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 0px;
+  color: #25373D;
+}
+
+.ratings {
+  display: inline;
+}
+
+.skills p {
+  font-family: Source Sans Pro;
+  color: dark-grey;
+  font-size: 18px;
+  margin-top: 20px;
+}
+/*Skill Segment: End*/
+/*====================*/
+
+
+/*======================*/
+/*Gallery Heading: Begin*/
+.jumbotron5 {
+  height: 70vh;
+  background-size: cover;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('http://i.imgur.com/07t2mb2.gif');
+}
+
+.jumbotron5 h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Pristina;
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+
+.jumbotron5 h1:before,
+.jumbotron5 h1:after {
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 163px;
+}
+
+.jumbotron5 h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.jumbotron5 h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.jumbotron5 h2 {
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 0px;
+  font-family: Oswald;
+  font-weight: 300;
+  font-size: 47px;
+}
+
+.jumbotron5 h3 {
+  text-align:center;  
+  color: #FFFFFF;
+  margin-top: 0px;
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 47px;
+}
+
+.jumbotron5 a {
+  text-decoration: none;
+}
+/*Gallery Heading: End*/
+/*====================*/
+
+
+/*Gallery Segment: Begin*/
+/*======================*/
+.photos {
+  margin: auto;
+  width: 1090px;
+  padding-top: 95px;
+  padding-bottom: 60px;
+}
+
+.photos .row {
+  margin-bottom: 20px;
+}
+
+.photos .img-thumbnail {
+    border:0;
+    box-shadow:0;
+    height: 180px;
+    width: 300px;
+    object-fit: cover;
+  overflow: hidden;
+}
+
+/*============*/
+/*Contact Page*/
+.contactMe {
+  background-color: #25373D;
+  height: 100vh;
+  background-size: cover;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.contactMe i {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hand {
+  height: 80px;
+}
+
+.contactMe h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 50px;
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.contactMe a {
+  color: #25373D;
+  text-decoration: none;
+}
+
+.contactMe h1 a:hover {
+  background-color: #25373D;
+  color: white;
+  padding: 4px;
+}
+
+.contactMe h3 {
+  color: #FFFFFF;
+  font-family: Pristina;
+  font-size: 35px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.contactMe h3:before,
+.contactMe h3:after {
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 165px;
+}
+
+.contactMe h3:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.contactMe h3:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.contactMe h2 {
+  font-family: Roboto Condensed;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-top: 10px;
+  font-size: 35px;
+}
+
+.contactMe .row {
+  display: inline;
+  color: #FFFFFF;
+  width: 200px;
+}
+
+.contactMe .row i:hover {
+  color: cadetblue;
+}
+
+.contactMe .footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.contactMe .footer p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: Roboto Condensed;
+  font-weight: bold;
+  font-size: 15px;
+  font-color: light-grey;
+}

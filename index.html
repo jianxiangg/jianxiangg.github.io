@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800|Lobster|Cabin:400,700|Source+Sans+Pro|Droid+Serif:400italic|Oswald:300, 400|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="jquery-1.11.3.js"></script>
+    <script type="text/javascript">      
+      $(document).ready(function() {
+        $('a[href^="#"]').on('click', function(event){
+          var target = $( $(this).attr('href') );
+          if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+              }, 1800);
+          }
+        }); 
+        
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 600) { 
+            $('.navbar').addClass('opaque'); 
+          } else {
+            $('.navbar').removeClass('opaque');
+          }
+        });
+        
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 200) { 
+            $('.headerContents').fadeOut(600); 
+          } else {
+            $('.headerContents').fadeIn(600);
+          }
+        });
+        
+        var scrolledIntro = false;
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 300 && !scrolledIntro) {
+            $('.introHeading').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.aboutMePara').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginLeft: "+=25px", 
+              opacity: 1
+            }, 1000);
+            $('.traits ul').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginLeft: "+=25px", 
+              opacity: 1
+            }, 1000);
+            scrolledIntro=true;
+          }
+        });
+        
+        var scrolledSchool = false;
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 1300 && !scrolledSchool) {
+            $('.schoolHeading h1').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.schoolHeading h2').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.schoolPara').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginLeft: "+=20px", 
+              opacity: 1
+            }, 1000);
+            scrolledSchool=true;
+          }
+        });
+        
+        var scrolledWork = false;
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 2000 && !scrolledWork) {
+            $('.workHeading h1').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.workHeading h2').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.workPara').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              marginLeft: "+=20px", 
+              opacity: 1
+            }, 1000);
+            scrolledWork=true;
+          }
+        });
+        
+        var scrolledProg = false;
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 4200 && !scrolledProg){
+            $('#ProgHeader').fadeIn(1200);
+            $('#ProgContainer').css({
+              opacity: 0,
+              display: 'block'
+            }).animate({
+              paddingTop: "+=20px", 
+              opacity: 1
+            }, 1100);
+            scrolledProg = true;
+          }
+        });
+        
+        var scrolledOther = false;
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 4700 && !scrolledOther){
+            $('#OtherHeader').fadeIn(1200);
+            $('#OtherContainer').css({
+              opacity: 0,
+              display: 'block'
+            }).animate({
+              paddingTop: "+=20px", 
+              opacity: 1
+            }, 1100);
+            scrolledOther = true;
+          }
+        });
+        
+        $('.hand').hover(function() {
+          doBounce($(".hand"), 2, '10px', 100);   
+        });
+
+        function doBounce(element, times, distance, speed) {
+          for(i = 0; i < times; i++) {
+            element.animate({paddingTop: '-='+distance},speed)
+            .animate({paddingTop: '+='+distance},speed);
+          }        
+        }
+        
+        
+      });        
+        
+    </script>
+  </head>
+    
+  <body data-spy="scroll" data-target="#myNavbar">
+    <header>
+      <h3 class="headerContents">HELLO, I'M</h3>
+      <h1 class="headerContents">JIAN XIANG</h1>
+      <h2 class="headerContents">(eh no, that isn't me)</h2>
+      <p class="headerContents">Find out about me.</p>
+      <a href="#about" class="center-block"><i class="fa fa-angle-down fa-3x" id='arrow'></i></a>
+    </header>
+      
+    <nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="link-style">
+          <ul>
+              <li><a href="#about">ABOUT ME</a></li>
+              <li><a href="#education">EDUCATION</a></li>
+              <li><a href="#jobs">WORK</a></li>
+              <li><a href="#skill">SKILLS</a></li>
+              <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="intro" id="about">
+      <div class="introHeadingCol">
+        <div class="introHeading" id="aboutMe">
+          <h1>ABOUT ME</h1>
+        </div>
+        <div class="introHeading" id="IAm">
+          <h1>I AM</h1>
+        </div>
+      </div>
+      <div class="introPara">
+        <div class="aboutMePara">
+          <p>My name is Gian Jian Xiang. I am an undergraduate in NUS, studying <a href="#ISE">Industrial & Systems Engineering</a>, and I love my field of studies because its applications are vast. With our skills, we can model real-world systems and their related problems, from which we use mathematical and statistical methods to solve and optimize. An apt example is in transportation planning, which is also my Final Year Project topic. I also dabble in some coding out of interest. I love problem solving and doing things that require creativity, such as making this webpage.
+          </p>
+        </div>
+        <div class="traits">
+          <ul>
+            <li><a href="http://www.16personalities.com/isfj-personality">An ISFJ</a></li>
+            <li>An Excellent Team Player</li>
+            <li>Creative</li>
+            <li>Empathetic</li>
+            <li>Fastidious</li>
+            <li>Industrious</li>
+            <li>Motivated</li>
+            <li>Responsible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron2" id="education">
+      <h1>Education</h1>
+      <h2>EDUCATION IS IMPORTANT</h2>
+      <h3><em>but</em> BIG BICEPS IS IMPORTANTER</h3>
+    </div>
+
+    <div class="school">
+      <div class="schoolHeading">
+        <div class="VJCHeading">
+          <h1>Victoria Junior College</h1>
+          <h2 id="ISE">(2008 - 2009)</h2>
+        </div>
+        <div class="NUSHeading">
+          <h1>National University of Singapore</h1>
+          <h2>(2012 - Current)</h2>
+        </div>
+        <div class="TUEHeading">
+          <h1>Eindhoven University of Technology</h1>
+          <h2>(Feb 2015 - Jul 2015)</h2>
+        </div>
+      </div>
+      <div class="schoolPara">
+        <div class="VJCPara">
+          <h2>Outdoor Activities Club (ODAC) </h2>
+          <p>I held 2 concurrent positions in my CCA: ODAC Room IC and Physical Training IC.</p>
+          <p>As a club, we went on a 3-week trip to Sikkim, India for a Youth Expedition Programme. Besides spending 2-week trekking the Goecha-La trail, we were tasked to advocate the importance of maintaining hygiene to the locals there. Incidentally, I was the head of the Education Team, whose responsibility was to inculcate good hygiene habits to a school of students through an interactive lesson. We also choreographed a cultural exchange performance for them and aided in the construction of ecological toilets for that school.</p>
+        </div>
+        <div class="NUSPara" >
+          <h2>Industrial & Systems Engineering (ISE)</h2>
+          <p>Generally, ISE deals with the optimization of complex processes or systems. It utilizes mathematical, statistical and engineering concepts to model, predict and evaluate the results to be obtained from said processes or systems. Some topics I learned include:</p>
+          <p><em>Human Factor Engineering, Operation Research, Quality Engineering, Simulation, Statistics, Systems Dynamics</em></p>
+          <p>The brilliant thing about ISE in NUS is that I was also taught basic programming (in C/C++). I even had a module on Software Engineering. These laid a foundation for me in programming, an essential skill in this day and age.</p>
+        </div>
+        <div class="TUEPara">
+          <h2>Student Exchange Programme (SEP)</h2>
+          <p>I spent 5 months in Netherlands for SEP, during which I was able to learn in a new environment, immerse in the Dutch culture, make international friends, have the opportunity to truly live independently and travel around many parts of Europe, broadening my view of the world.</p>
+        </div>
+      </div>
+    </div>
+   
+
+    <div class="jumbotron3" id="jobs">
+        <h1>Work</h1>
+        <h2>All play & No work makes Jack</h2>
+        <h3>an inexperienced undergraduate</h3>
+    </div>
+
+    <div class="work">
+      <div class="workHeading">
+        <div class="InfineonHeading">
+          <h1>Infineon Technologies</h1>
+          <h2>(Aug 2015 - Current)</h2>
+        </div>
+        <div class="MicronHeading">
+          <h1>Micron Semiconductor Asia Pte Ltd</h1>
+          <h2>(May 2014 - Jul 2014)</h2>
+        </div>
+        <div class="TPTHeading">
+          <h1>The Planet Traveller</h1>
+          <h2>(Apr 2012 - Aug 2012)</h2>
+        </div>
+      </div>
+      <div class="workPara">
+        <div class="InfineonPara">
+          <h2>Student Consultant for Systems Design Project (SDP)</h2>
+          <p>Currently I am in the midst of meeting with the manager to learn about the company's profile and manufacturing process, while shaping our project scope. Our objectives will tentatively be to evaluate and validate the current methodology to determine the sensitivity level of the capacity commitment of all product groups with regards to the volatile demand structure fluctuations, in order to ensure timelinesss of orders, all within capacity constraints. We will then propose, evaluate and execute solutions to manage product groups that are highly sensitive to fluctuations. </p>
+        </div>
+        <div class="MicronPara">
+          <h2>Summer Internship</h2>
+          <p>I was awarded the Micron Scholarship for the 4 years in NUS. Even though there was no form of contractual bond with Micron, I saw the opportunity and requested for an internship back in 2014.</p>
+          <p>There, I was able to learn about the complexity of the wafer/micro-chip production process. I gained an appreciation for the things I was taught in class when I was attached to an ongoing project in Micron. The project was aimed at evaluating the accuracy of a Queuing-Theory based formula used to estimate cycle time of the manufacturing process and studying the feasibility of implementing another method to do the same thing. As an undergraduate, I was able to approach the problem from an academic perspective, thereby providing fresh insight into the problem for the team.</p> 
+        </div>
+        <div class="TPTPara">
+          <h2>Part-Time Job</h2>
+          <p>Among the several part-time jobs I have taken up, which range from administrative work in a commodities company to an event helper, working here as a retail assistant had been the most enriching one. Besides having to learn about the many products sold in the store, I learned the daily retail operations while being on rotation among all six outlets in Singapore, where the customer demographics are quite different. What was most challenging was having to serve and interact with these various kinds of customers daily. I have gained an appreciation for customer service since then.  </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron4" id="skill">
+      <h1>Skills</h1>
+      <h2>Jack of All Trades, Master of None</h2>
+      <h3>Is Still Better than Master of One</h3>
+    </div>
+    
+    <div class="skills">
+      <div class="skillHeading" id="ProgHeader">
+        <h1 >Programming Languages</h1>
+      </div>
+      <div class="container" id="ProgContainer">
+        <div class="row">  
+          <div class="col-md-4" id="CPP">
+            <i class="fa fa-code fa-3x"></i>  
+            <h3>C/C++</h3>
+            <p>First exposed to coding in general, and C language in particular, as part of the ISE curriculum.</p>
+          </div>
+          <div class="col-md-4" id="VBA">
+            <i class="fa fa-file-excel-o fa-3x"></i>
+            <h3>Excel VBA</h3>
+            <p>Self-taught during internship at Micron through a side-project. Also used it extensively for a health-care system design module during exchange to simulate patient arrivals and control appointment scheduling.</p>
+          </div>
+          <div class="col-md-4" id="HTML">
+            <i class="fa fa-html5 fa-3x"></i>
+            <h3>HTML, CSS, jQuery</h3>
+            <p>Self-taught during the holidays to create this website through <a href="https://www.codecademy.com/">Codecademy</a>, a site that teaches programming for free.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skillHeading" id="OtherHeader">
+        <h1>Specialized Knowledge</h1>
+      </div>
+      <div class="container" id="OtherContainer">
+        <div class="row">  
+          <div class="col-md-4" id="OR">
+            <i class="fa fa-area-chart fa-3x"></i>
+            <h3>Operation Research</h3>
+            <p>Knowledge in Linear Programming and its variants, with some experience in actual application in Final Year Project.</p>
+          </div>
+          <div class="col-md-4" id="QE">
+            <i class="fa fa-line-chart fa-3x"></i>
+            <h3>Quality Engineering</h3>
+            <p>Learned in the Statistical process control, using tools such as control charts and process capability index. Some exposure to Total Quality Management and the Six Sigma process. </p>
+          </div>
+          <div class="col-md-4" id="Simul">
+            <i class="fa fa-desktop fa-3x"></i>
+            <h3>Simulation</h3>
+            <p>Knowledge in steps for data collection, model validation/ verification and using Automod software for actual simulation of a checkout system of an NTUC outlet</p>
+          </div>
+        </div>
+        <br>
+        <div class="row">  
+          <div class="col-md-4" id="Stats">
+            <i class="fa fa-bar-chart fa-3x"></i>
+            <h3>Statistics</h3>
+            <p>Exposure to Analysis of Variance (ANOVA), Design of Experiment, Markov Chains, Queuing Theory and Regression Analysis.</p>
+          </div>
+          <div class="col-md-4" id="SupplyChain">
+            <i class="fa fa-industry fa-3x"></i>
+            <h3>Supply Chain Management</h3>
+          </div>
+          <div class="col-md-4" id="Transport">
+            <i class="fa fa-subway fa-3x"></i>
+            <h3>Transit Operations and Planning</h3>
+            <p>Currently engaging in self-study on said topic for Final Year Project. To enroll in a module on Transportation Management in final semester.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="jumbotron5" id="gallery">
+      <h1>Gallery</h1>
+      <h2>IF A PICTURE SPEAKS A THOUSAND WORDS</h2>
+      <h3>THEN AN ALBUM WOULD BE VERBOSE</h3>
+    </div>
+    
+    <div class="photos">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/1931355_46768656837_4517_n.jpg?oh=1555b5b6f274ff906da119b9c432f716&oe=56A3058F" class="img-thumbnail" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1931355_46768566837_836_n.jpg?oh=5d56abf59dcd97c00a70a59f9bf5ad59&oe=56661582&__gda__=1452896821_6095a624034f5af51cba01fe608ce9cd" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/1931355_46768711837_7780_n.jpg?oh=d3d3f911ffc90add056795d91810a199&oe=56647B71" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/1931355_46768546837_9990_n.jpg?oh=50378a04abc8967b6d31b4563f6a8a96&oe=56600B05" class="img-thumbnail">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/1500_10151517788217690_1645693218_n.jpg?oh=bbf8027f0cae7f5811f2b6e8b4835123&oe=565D75E9&__gda__=1454093880_54250fa26e5c5c4bdb89c11558a31039" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/1014347_10151983114628238_2008024293_n.jpg?oh=2fcb06d402e2c6c3d111d9756fa75a83&oe=56666B6D" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/1002479_10151613005057655_1473773991_n.jpg?oh=093f6c47c9fd351af34091f66977e666&oe=56615050&__gda__=1449289786_9d77c598c36003cb0c7dcfa5ae7c4799" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xpf1/v/l/t1.0-9/10430867_10152574595951838_336151506259311962_n.jpg?oh=d2de406e916748aa5073cc464a42adfe&oe=56A6F7F9" class="img-thumbnail">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-0/q83/p206x206/11388_10153289426362744_1411875800184900438_n.jpg?oh=677332134dc3f5799384bfc0ae0ed02e&oe=56AA3536&__gda__=1453387260_20bc8c76d61a55e7b37a6bb572fe2ca2" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/11265001_10153056492939355_5462715531260675408_n.jpg?oh=52659865e2028542fece9a34780be275&oe=569FA1B0" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/11146272_10153303193589382_7434110223560515351_n.jpg?oh=b1617276a2a0a87b7bbfb78325789738&oe=566394AD" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+          <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/11096546_10205144441663973_3133976172153826523_n.jpg?oh=86d57bc15e3d0eb1d709762522387eaf&oe=565EAB53&__gda__=1453908158_631e8fa8b97d178edf2ee60b8e48e54f" class="img-thumbnail">
+        </div>
+      </div>
+    </div>
+
+    <div class="contactMe" >
+      <div class="hand">
+        <i class="fa fa-hand-paper-o fa-4x" id=
+"raiseHand"></i>
+      </div>
+      <h1>
+        <a href="mailto:g.jianxiang@hotmail.sg">CONTACT ME</a>
+      </h1>
+      <h3 id="contact">or</h3>
+      <h2>You could follow me too:</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="https://www.facebook.com/jianxianglah"><i class="fa fa-facebook-square fa-4x"></i></a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://instagram.com/giandescendant/"><i class="fa fa-instagram fa-4x"></i></a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://sg.linkedin.com/in/gianjianxiang"><i class="fa fa-linkedin-square fa-4x"></i></a>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Handmade by me © 2015</p>
+        <p>Created with Adobe Brackets</p>
+      </div>
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
