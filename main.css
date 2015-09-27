@@ -562,13 +562,11 @@ header p {
 /*====================*/
 /*Skill Segment: Begin*/
 .skills {
-  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
-  height: 1050px;
 }
 
 .skillHeading {
