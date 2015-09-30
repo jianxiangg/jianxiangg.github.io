@@ -50,26 +50,33 @@
         
         var scrolledIntro = false;
         $(window).scroll(function() {
-          if($(this).scrollTop() > 300 && !scrolledIntro) {
-            $('.introHeading').css({
+          if($(this).scrollTop() > 250 && !scrolledIntro) {
+            $('#aboutMeHeader').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginRight: "+=20px", 
+              paddingRight: "+=15px", 
               opacity: 1
             }, 1000);
-            $('.aboutMePara').css({
+            $('#aboutMePara').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginLeft: "+=25px", 
+              paddingLeft: "+=15px", 
               opacity: 1
             }, 1000);
-            $('.traits ul').css({
+            $('#traits ul').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginLeft: "+=25px", 
+              paddingLeft: "+=15px", 
+              opacity: 1
+            }, 1000);
+            $('#IAmHeader').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingRight: "+=15px", 
               opacity: 1
             }, 1000);
             scrolledIntro=true;
@@ -202,20 +209,22 @@
     </nav>
 
     <div class="intro" id="about">
-      <div class="introHeadingCol">
-        <div class="introHeading" id="aboutMe">
+      <div id="aboutMeRow">
+        <div id="aboutMeHeader">
           <h1>ABOUT ME</h1>
         </div>
-        <div class="introHeading" id="IAm">
-          <h1>I AM</h1>
+        <div id="aboutMeContent">
+          <div id="aboutMePara">
+            <p>My name is Gian Jian Xiang. I am an undergraduate in NUS, studying <a href="#ISE">Industrial & Systems Engineering</a>, and I love my field of studies because its applications are vast. With our skills, we can model real-world systems and their related problems, from which we use mathematical and statistical methods to solve and optimize. An apt example is in transportation planning, which is also my Final Year Project topic. I also dabble in some coding out of interest. I love problem solving and doing things that require creativity, such as making this webpage.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="introPara">
-        <div class="aboutMePara">
-          <p>My name is Gian Jian Xiang. I am an undergraduate in NUS, studying <a href="#ISE">Industrial & Systems Engineering</a>, and I love my field of studies because its applications are vast. With our skills, we can model real-world systems and their related problems, from which we use mathematical and statistical methods to solve and optimize. An apt example is in transportation planning, which is also my Final Year Project topic. I also dabble in some coding out of interest. I love problem solving and doing things that require creativity, such as making this webpage.
-          </p>
+      <div id="IAmRow">
+        <div id="IAmHeader">
+          <h1>I AM</h1>
         </div>
-        <div class="traits">
+        <div id="traits">
           <ul>
             <li><a href="http://www.16personalities.com/isfj-personality">An ISFJ</a></li>
             <li>An Excellent Team Player</li>
