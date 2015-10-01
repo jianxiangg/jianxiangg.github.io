@@ -50,7 +50,19 @@
         
         var scrolledIntro = false;
         $(window).scroll(function() {
-          if($(this).scrollTop() > 250 && !scrolledIntro) {
+          if($(this).scrollTop() > 210 && !scrolledIntro) {
+            $('#aboutMeContent').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              opacity: 1
+            }, 1000);
+            $('#traits').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              opacity: 1
+            }, 1000);
             $('#aboutMeHeader').css({
               opacity: 0,
               display: 'inline-block'

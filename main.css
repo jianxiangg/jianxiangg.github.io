@@ -174,12 +174,12 @@ header p {
 }
 
 #aboutMeRow {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
 #IAmRow {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
@@ -202,7 +202,7 @@ header p {
 }
 
 #aboutMeContent {
-  display: inline-block;
+  display: none;
   width: 68%;
   vertical-align: top;
   border-left: 5px solid black;
@@ -217,7 +217,7 @@ header p {
 }
 
 #traits {
-  display: inline-block;
+  display: none;
   vertical-align: top;
   padding-top: 23px;
   border-left: 5px solid black;
@@ -234,7 +234,6 @@ header p {
   font-size: 19px;
   font-style: italic;
 }
-
 
 /*Intro Segment: End*/
 /*==================*/
@@ -868,10 +867,25 @@ header p {
 
 @media screen and (max-width: 1000px) {
   .intro {
-    width: 85%;
+    width: 98%;
   }
   .intro h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #aboutMeHeader, #aboutMeContent, #IAmHeader, #traits{
+    width: 100%;
+  }
+  
+  .intro h1 {
     font-size: 30px;
+    text-align: left;
+  }
+  
+  .intro p {
+    font-size: 16px;
   }
 }
 
