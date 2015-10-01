@@ -91,13 +91,6 @@
   color: #249991;
 }
 
-.navbar .opaque li a:active{
-  color: #249991;
-}
-/*.navbar.opaque li a:hover {
-  border: 1px solid black;
-}*/
-
 /* Navigation Bar: End */
 /*=====================*/
 
@@ -174,21 +167,16 @@ header p {
 }
 
 #aboutMeRow {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
 #IAmRow {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
-#aboutMeHeader {
-  width: 30%;
-  display: none;
-}
-
-#IAmHeader {
+.introHeader {
   width: 30%;
   display: none;
 }
@@ -227,9 +215,6 @@ header p {
   padding: 0;
   list-style-type: none;
   display: none;
-}
-
-#traits li {
   font-family: Source Sans Pro;
   font-size: 19px;
   font-style: italic;
@@ -313,80 +298,51 @@ header p {
   padding-bottom: 60px;
 }
 
-.schoolHeading {
-  width: 33%;
-  height: 830px;
-  border-right: 5px solid #25373D;
-  display: inline-block;
-  color: #25373D;
-  text-align: right;
+.schoolRow {
+  width: 95%;
+  margin: auto;
 }
 
-.schoolHeading h1 {
+.schoolHeaders {
+  width: 29%;
+  text-align: right;
+  display: none;
+}
+
+.schoolHeaders h1 {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 39px;
   color: #25373D;
   text-align: right;
-  display: none;
 }
 
-.schoolHeading h2{
+.schoolHeaders h2 {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 20px;
   color: #25373D;
   margin-top: auto;
+}
+
+.schoolPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  color: #25373D;
+  margin-top: 28px;
+}
+
+.schoolContents {
+  border-left: 5px solid black;
   display: none;
-}
-
-.VJCHeading h1 {
-  margin-left: 100px;
-}
-
-.NUSHeading h1 {
-  margin-top: 135px;
-}
-
-.TUEHeading h1 {
-  margin-top: 160px;
-}
+  width: 70%;
+  vertical-align: top;
+} 
 
 .schoolPara {
-  width: 60%;
-  height: 750px;
-  display: inline-block;
-  vertical-align:top;
-  padding-top: 8px;
-  display: none;
-}
-
-.VJCPara h2 {
-  font-family: Roboto Condensed;
-  font-weight: 700;
-  font-size: 25px;
-  color: #25373D;
-}
-
-.school p {
   font-family: Source Sans Pro;
-  font-size: 18px;
-}
-
-.NUSPara h2 {
-  font-family: Roboto Condensed;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 50px;
-  color: #25373D;
-}
-
-.TUEPara h2 {
-  font-family: Roboto Condensed;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 50px;
-  color: #25373D;
+  font-size: 19px;
 }
 /*School Segment: End*/
 /*==================*/
@@ -468,74 +424,52 @@ header p {
   padding-bottom: 60px;
 }
 
-.workHeading {
-  width: 33%;
-  height: 960px;
-  border-right: 5px solid #25373D;
-  display: inline-block;
+.workRow {
+  width: 95%;
+  margin: auto;
+}
+
+.workHeaders {
+  width: 30%;
+  text-align: right;
+  display: none;
+}
+
+.workHeaders h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 35px;
   color: #25373D;
   text-align: right;
 }
 
-.work h1 {
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 39px;
-  display: none;
-}
-
-.MicronHeading {
-  margin-top: 150px;
-}
-
-.TPTHeading {
-  margin-top: 185px;
-}
-
-.workHeading h2{
+.workHeaders h2 {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 20px;
-  display: none;
+  color: #25373D;
   margin-top: auto;
 }
 
+.workPara h2 {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 25px;
+  color: #25373D;
+  margin-top: 25px;
+}
+
+.workContents {
+  border-left: 5px solid black;
+  width: 69%;
+  vertical-align: top;
+  display: none;
+} 
+
 .workPara {
-  width: 60%;
-  height: 1000px;
-  display: inline-block;
-  vertical-align:top;
-  padding-top: 8px;
-}
-
-.InfineonPara h2 {
-  font-family: Roboto Condensed;
-  font-weight: 700;
-  font-size: 25px;
-  color: #25373D;
-}
-
-.MicronPara h2 {
-  font-family: Roboto Condensed;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 60px;
-  color: #25373D;
-}
-
-.TPTPara h2 {
-  font-family: Roboto Condensed;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 50px;
-  color: #25373D;
-}
-
-.work p, .MicronPara li  {
   font-family: Source Sans Pro;
-  font-size: 18px;
+  font-size: 19px;
 }
-
 /*Work Segment: End*/
 /*=================*/
 
@@ -628,7 +562,7 @@ header p {
   margin-top: 85px;
 }
 
-#LangHeader, #OtherHeader {
+#OtherHeader {
   margin-top: 40px;
 }
 
@@ -865,27 +799,84 @@ header p {
   font-color: light-grey;
 }
 
+/*============*/
+/* Responsive */
 @media screen and (max-width: 1000px) {
-  .intro {
+  .intro, .school, .work {
     width: 98%;
   }
+  
   .intro h1 {
     font-size: 35px;
+  }
+  
+  .schoolHeaders h1 {
+    font-size: 20px;
+  }
+  
+  .schoolHeaders h2, .workHeaders h2 {
+    font-size: 15px;
+  }
+  
+  .schoolPara h2, .workPara h2 {
+    font-size: 20px;
+  }
+  
+  .workHeaders h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .workHeaders h1 {
+    font-size: 18px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  #aboutMeHeader, #aboutMeContent, #IAmHeader, #traits{
+  .introHeader, .introPara, .schoolHeaders, .schoolPara, .workHeaders, .workPara{
     width: 100%;
   }
   
-  .intro h1 {
+  .intro h1{
     font-size: 30px;
+    text-align: left;
+  } 
+  
+  .schoolHeaders h1 {
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .schoolHeaders h2 {
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .schoolPara h2 {
+    font-size: 25px;
     text-align: left;
   }
   
-  .intro p {
-    font-size: 16px;
+  .intro p, .school p, .work p {
+    font-size: 18px;
+  }
+  
+  .workHeaders h1 {
+    text-align: left;
+    width: 100%;
+    font-size: 30px;
+  }
+  
+  .workHeaders h2 {
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .workPara h2 {
+    font-size: 25px;
   }
 }
 

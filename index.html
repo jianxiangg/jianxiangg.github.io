@@ -63,32 +63,18 @@
             }).animate({
               opacity: 1
             }, 1000);
-            $('#aboutMeHeader').css({
+            $('.introHeader').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              paddingRight: "+=15px", 
+              paddingRight: "+=20px", 
               opacity: 1
             }, 1000);
-            $('#aboutMePara').css({
+            $('.introPara').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              paddingLeft: "+=15px", 
-              opacity: 1
-            }, 1000);
-            $('#traits ul').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingLeft: "+=15px", 
-              opacity: 1
-            }, 1000);
-            $('#IAmHeader').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingRight: "+=15px", 
+              paddingLeft: "+=20px", 
               opacity: 1
             }, 1000);
             scrolledIntro=true;
@@ -98,25 +84,24 @@
         var scrolledSchool = false;
         $(window).scroll(function(){
           if($(this).scrollTop() > 1300 && !scrolledSchool) {
-            $('.schoolHeading h1').css({
+            $('.schoolHeaders').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginRight: "+=20px", 
+              paddingRight: "+=20px", 
               opacity: 1
             }, 1000);
-            $('.schoolHeading h2').css({
+            $('.schoolContents').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginRight: "+=20px", 
               opacity: 1
             }, 1000);
             $('.schoolPara').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginLeft: "+=20px", 
+              paddingLeft: "+=20px", 
               opacity: 1
             }, 1000);
             scrolledSchool=true;
@@ -126,25 +111,24 @@
         var scrolledWork = false;
         $(window).scroll(function(){
           if($(this).scrollTop() > 2000 && !scrolledWork) {
-            $('.workHeading h1').css({
+            $('.workHeaders').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginRight: "+=20px", 
+              paddingRight: "+=20px", 
               opacity: 1
             }, 1000);
-            $('.workHeading h2').css({
+            $('.workContents').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginRight: "+=20px", 
               opacity: 1
             }, 1000);
             $('.workPara').css({
               opacity: 0,
               display: 'inline-block'
             }).animate({
-              marginLeft: "+=20px", 
+              paddingLeft: "+=20px", 
               opacity: 1
             }, 1000);
             scrolledWork=true;
@@ -222,22 +206,22 @@
 
     <div class="intro" id="about">
       <div id="aboutMeRow">
-        <div id="aboutMeHeader">
+        <div class="introHeader" id="aboutMeHeader">
           <h1>ABOUT ME</h1>
         </div>
         <div id="aboutMeContent">
-          <div id="aboutMePara">
+          <div class="introPara" id="aboutMePara">
             <p>My name is Gian Jian Xiang. I am an undergraduate in NUS, studying <a href="#ISE">Industrial & Systems Engineering</a>, and I love my field of studies because its applications are vast. With our skills, we can model real-world systems and their related problems, from which we use mathematical and statistical methods to solve and optimize. An apt example is in transportation planning, which is also my Final Year Project topic. I also dabble in some coding out of interest. I love problem solving and doing things that require creativity, such as making this webpage.
             </p>
           </div>
         </div>
       </div>
       <div id="IAmRow">
-        <div id="IAmHeader">
+        <div class="introHeader" id="IAmHeader">
           <h1>I AM</h1>
         </div>
         <div id="traits">
-          <ul>
+          <ul class="introPara">
             <li><a href="http://www.16personalities.com/isfj-personality">An ISFJ</a></li>
             <li>An Excellent Team Player</li>
             <li>Creative</li>
@@ -258,35 +242,44 @@
     </div>
 
     <div class="school">
-      <div class="schoolHeading">
-        <div class="VJCHeading">
+      <div class="schoolRow" id="VJCRow">
+        <div class="schoolHeaders" id="VJCHeading">
           <h1>Victoria Junior College</h1>
           <h2 id="ISE">(2008 - 2009)</h2>
         </div>
-        <div class="NUSHeading">
+        <div class="schoolContents">
+          <div class="schoolPara" id="VJCPara">
+            <h2>Outdoor Activities Club (ODAC) </h2>
+              <p>I held 2 concurrent positions in my CCA: ODAC Room IC and Physical Training IC.</p>
+              <p>As a club, we went on a 3-week trip to Sikkim, India for a Youth Expedition Programme. Besides spending 2-week trekking the Goecha-La trail, we were tasked to advocate the importance of maintaining hygiene to the locals there. Incidentally, I was the head of the Education Team, whose responsibility was to inculcate good hygiene habits to a school of students through an interactive lesson. We also choreographed a cultural exchange performance for them and aided in the construction of ecological toilets for that school.</p>
+          </div>
+        </div>
+      </div>
+      <div class="schoolRow" id="NUSRow">
+        <div class="schoolHeaders" id="NUSHeading">
           <h1>National University of Singapore</h1>
           <h2>(2012 - Current)</h2>
         </div>
-        <div class="TUEHeading">
+        <div class="schoolContents">
+          <div class="schoolPara" id="NUSPara" >
+            <h2>Industrial & Systems Engineering (ISE)</h2>
+            <p>Generally, ISE deals with the optimization of complex processes or systems. It utilizes mathematical, statistical and engineering concepts to model, predict and evaluate the results to be obtained from said processes or systems. Some topics I learned include:</p>
+            <p><em>Human Factor Engineering, Operation Research, Quality Engineering, Simulation, Statistics, Systems Dynamics</em></p>
+            <p>The brilliant thing about ISE in NUS is that I was also taught basic programming (in C/C++). I even had a module on Software Engineering. These laid a foundation for me in programming, an essential skill in this day and age.</p>
+          </div>
+        </div>
+      </div>
+      <div class="schoolRow" id="TUERow">
+        <div class="schoolHeaders" id="TUEHeading">
           <h1>Eindhoven University of Technology</h1>
           <h2>(Feb 2015 - Jul 2015)</h2>
         </div>
-      </div>
-      <div class="schoolPara">
-        <div class="VJCPara">
-          <h2>Outdoor Activities Club (ODAC) </h2>
-          <p>I held 2 concurrent positions in my CCA: ODAC Room IC and Physical Training IC.</p>
-          <p>As a club, we went on a 3-week trip to Sikkim, India for a Youth Expedition Programme. Besides spending 2-week trekking the Goecha-La trail, we were tasked to advocate the importance of maintaining hygiene to the locals there. Incidentally, I was the head of the Education Team, whose responsibility was to inculcate good hygiene habits to a school of students through an interactive lesson. We also choreographed a cultural exchange performance for them and aided in the construction of ecological toilets for that school.</p>
-        </div>
-        <div class="NUSPara" >
-          <h2>Industrial & Systems Engineering (ISE)</h2>
-          <p>Generally, ISE deals with the optimization of complex processes or systems. It utilizes mathematical, statistical and engineering concepts to model, predict and evaluate the results to be obtained from said processes or systems. Some topics I learned include:</p>
-          <p><em>Human Factor Engineering, Operation Research, Quality Engineering, Simulation, Statistics, Systems Dynamics</em></p>
-          <p>The brilliant thing about ISE in NUS is that I was also taught basic programming (in C/C++). I even had a module on Software Engineering. These laid a foundation for me in programming, an essential skill in this day and age.</p>
-        </div>
-        <div class="TUEPara">
-          <h2>Student Exchange Programme (SEP)</h2>
-          <p>I spent 5 months in Netherlands for SEP, during which I was able to learn in a new environment, immerse in the Dutch culture, make international friends, have the opportunity to truly live independently and travel around many parts of Europe, broadening my view of the world.</p>
+        <div class="schoolContents">
+          <div class="schoolPara" id="TUEPara">
+            <h2>Student Exchange Programme (SEP)</h2>
+            <p>I spent 5 months in Netherlands for SEP, during which I was able to learn in a new environment, immerse in the Dutch culture, make international friends, have the opportunity to truly live independently and travel around many parts of Europe, broadening my view of the world.</p>
+            <br>
+          </div>
         </div>
       </div>
     </div>
@@ -299,33 +292,42 @@
     </div>
 
     <div class="work">
-      <div class="workHeading">
-        <div class="InfineonHeading">
+      <div class="workRow" id="InfineonRow">
+        <div class="workHeaders" id="InfineonHeader">
           <h1>Infineon Technologies</h1>
           <h2>(Aug 2015 - Current)</h2>
         </div>
-        <div class="MicronHeading">
+        <div class="workContents">
+          <div class="workPara" id="InfineonPara">
+            <h2>Student Consultant for Systems Design Project (SDP)</h2>
+            <p>Currently I am in the midst of meeting with the manager to learn about the company's profile and manufacturing process, while shaping our project scope. Our objectives will tentatively be to evaluate and validate the current methodology to determine the sensitivity level of the capacity commitment of all product groups with regards to the volatile demand structure fluctuations, in order to ensure timelinesss of orders, all within capacity constraints. We will then propose, evaluate and execute solutions to manage product groups that are highly sensitive to fluctuations. </p>
+          </div>
+        </div>
+      </div>
+      <div class="workRow" id="MicronRow">  
+        <div class="workHeaders" id="MicronHeader">
           <h1>Micron Semiconductor Asia Pte Ltd</h1>
           <h2>(May 2014 - Jul 2014)</h2>
         </div>
-        <div class="TPTHeading">
+        <div class="workContents">
+          <div class="workPara" id="MicronPara">
+            <h2>Summer Internship</h2>
+            <p>I was awarded the Micron Scholarship for the 4 years in NUS. Even though there was no form of contractual bond with Micron, I saw the opportunity and requested for an internship back in 2014.</p>
+            <p>There, I was able to learn about the complexity of the wafer/micro-chip production process. I gained an appreciation for the things I was taught in class when I was attached to an ongoing project in Micron. The project was aimed at evaluating the accuracy of a Queuing-Theory based formula used to estimate cycle time of the manufacturing process and studying the feasibility of implementing another method to do the same thing. As an undergraduate, I was able to approach the problem from an academic perspective, thereby providing fresh insight into the problem for the team.</p> 
+          </div>
+        </div>
+      </div>
+      <div class="workRow" id="TPTRow">
+        <div class="workHeaders" id="TPTHeader">
           <h1>The Planet Traveller</h1>
           <h2>(Apr 2012 - Aug 2012)</h2>
         </div>
-      </div>
-      <div class="workPara">
-        <div class="InfineonPara">
-          <h2>Student Consultant for Systems Design Project (SDP)</h2>
-          <p>Currently I am in the midst of meeting with the manager to learn about the company's profile and manufacturing process, while shaping our project scope. Our objectives will tentatively be to evaluate and validate the current methodology to determine the sensitivity level of the capacity commitment of all product groups with regards to the volatile demand structure fluctuations, in order to ensure timelinesss of orders, all within capacity constraints. We will then propose, evaluate and execute solutions to manage product groups that are highly sensitive to fluctuations. </p>
-        </div>
-        <div class="MicronPara">
-          <h2>Summer Internship</h2>
-          <p>I was awarded the Micron Scholarship for the 4 years in NUS. Even though there was no form of contractual bond with Micron, I saw the opportunity and requested for an internship back in 2014.</p>
-          <p>There, I was able to learn about the complexity of the wafer/micro-chip production process. I gained an appreciation for the things I was taught in class when I was attached to an ongoing project in Micron. The project was aimed at evaluating the accuracy of a Queuing-Theory based formula used to estimate cycle time of the manufacturing process and studying the feasibility of implementing another method to do the same thing. As an undergraduate, I was able to approach the problem from an academic perspective, thereby providing fresh insight into the problem for the team.</p> 
-        </div>
-        <div class="TPTPara">
-          <h2>Part-Time Job</h2>
-          <p>Among the several part-time jobs I have taken up, which range from administrative work in a commodities company to an event helper, working here as a retail assistant had been the most enriching one. Besides having to learn about the many products sold in the store, I learned the daily retail operations while being on rotation among all six outlets in Singapore, where the customer demographics are quite different. What was most challenging was having to serve and interact with these various kinds of customers daily. I have gained an appreciation for customer service since then.  </p>
+        <div class="workContents">
+          <div class="workPara" id="TPTPara">
+            <h2>Part-Time Job</h2>
+            <p>Among the several part-time jobs I have taken up, which range from administrative work in a commodities company to an event helper, working here as a retail assistant had been the most enriching one. Besides having to learn about the many products sold in the store, I learned the daily retail operations while being on rotation among all six outlets in Singapore, where the customer demographics are quite different. What was most challenging was having to serve and interact with these various kinds of customers daily. I have gained an appreciation for customer service since then.  </p>
+          <br>
+          </div>
         </div>
       </div>
     </div>
