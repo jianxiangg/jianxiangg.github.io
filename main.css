@@ -33,7 +33,6 @@
 .navbar li {
   display: inline;
   float: left;
-  
 }
 
 .clearfix:before,
@@ -57,6 +56,10 @@
   text-decoration: none;
   line-height: 40px;
   margin-left: 30px;
+}
+
+.navbar i {
+  display: none;
 }
 /* Adjusting the brand and link colors */
 
@@ -84,7 +87,11 @@
 }
 
 .navbar.opaque a {
-    color:black;
+  color:black;
+}
+
+.navbar.opaque i {
+  color:black;
 }
 
 .navbar.opaque a:hover{
@@ -193,7 +200,7 @@ header p {
   display: none;
   width: 68%;
   vertical-align: top;
-  border-left: 5px solid black;
+  border-left: 5px solid #25373D;
   padding-top: 23px;
 }
 
@@ -334,7 +341,7 @@ header p {
 }
 
 .schoolContents {
-  border-left: 5px solid black;
+  border-left: 5px solid #25373D;
   display: none;
   width: 70%;
   vertical-align: top;
@@ -460,7 +467,7 @@ header p {
 }
 
 .workContents {
-  border-left: 5px solid black;
+  border-left: 5px solid #25373D;
   width: 69%;
   vertical-align: top;
   display: none;
@@ -673,7 +680,7 @@ header p {
 /*======================*/
 .photos {
   margin: auto;
-  width: 1090px;
+  width: 1000px;
   padding-top: 95px;
   padding-bottom: 60px;
 }
@@ -830,6 +837,26 @@ header p {
 @media screen and (max-width: 710px) {
   .workHeaders h1 {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .navbar ul, .navbar .opaque ul {
+    display: none;
+    height: auto;
+  }
+  
+  nav li {
+    display: block;
+    width: 100%;
+    height: 25px;
+  }
+  
+  .navbar i {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
   }
 }
 

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome To My Page</title>
-
-    <!-- Bootstrap -->
+    
+    <link href="lightbox.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link href="main.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,800|Lobster|Cabin:400,700|Source+Sans+Pro|Droid+Serif:400italic|Oswald:300, 400|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -19,167 +19,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="jquery-1.11.3.js"></script>
-    <script type="text/javascript">      
-      $(document).ready(function() {
-        $('a[href^="#"]').on('click', function(event){
-          var target = $( $(this).attr('href') );
-          if( target.length ) {
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top
-              }, 1800);
-          }
-        }); 
-        
-        $(window).scroll(function() {
-          if($(this).scrollTop() > 600) { 
-            $('.navbar').addClass('opaque'); 
-          } else {
-            $('.navbar').removeClass('opaque');
-          }
-        });
-        
-        $(window).scroll(function() {
-          if($(this).scrollTop() > 200) { 
-            $('.headerContents').fadeOut(600); 
-          } else {
-            $('.headerContents').fadeIn(600);
-          }
-        });
-        
-        var scrolledIntro = false;
-        $(window).scroll(function() {
-          if($(this).scrollTop() > 210 && !scrolledIntro) {
-            $('#aboutMeContent').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              opacity: 1
-            }, 1000);
-            $('#traits').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              opacity: 1
-            }, 1000);
-            $('.introHeader').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingRight: "+=20px", 
-              opacity: 1
-            }, 1000);
-            $('.introPara').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingLeft: "+=20px", 
-              opacity: 1
-            }, 1000);
-            scrolledIntro=true;
-          }
-        });
-        
-        var scrolledSchool = false;
-        $(window).scroll(function(){
-          if($(this).scrollTop() > 1300 && !scrolledSchool) {
-            $('.schoolHeaders').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingRight: "+=20px", 
-              opacity: 1
-            }, 1000);
-            $('.schoolContents').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              opacity: 1
-            }, 1000);
-            $('.schoolPara').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingLeft: "+=20px", 
-              opacity: 1
-            }, 1000);
-            scrolledSchool=true;
-          }
-        });
-        
-        var scrolledWork = false;
-        $(window).scroll(function(){
-          if($(this).scrollTop() > 2000 && !scrolledWork) {
-            $('.workHeaders').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingRight: "+=20px", 
-              opacity: 1
-            }, 1000);
-            $('.workContents').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              opacity: 1
-            }, 1000);
-            $('.workPara').css({
-              opacity: 0,
-              display: 'inline-block'
-            }).animate({
-              paddingLeft: "+=20px", 
-              opacity: 1
-            }, 1000);
-            scrolledWork=true;
-          }
-        });
-        
-        var scrolledProg = false;
-        $(window).scroll(function(){
-          if($(this).scrollTop() > 4200 && !scrolledProg){
-            $('#ProgHeader').fadeIn(1200);
-            $('#ProgContainer').css({
-              opacity: 0,
-              display: 'block'
-            }).animate({
-              paddingTop: "+=20px", 
-              opacity: 1
-            }, 1100);
-            scrolledProg = true;
-          }
-        });
-        
-        var scrolledOther = false;
-        $(window).scroll(function() {
-          if($(this).scrollTop() > 4700 && !scrolledOther){
-            $('#OtherHeader').fadeIn(1200);
-            $('#OtherContainer').css({
-              opacity: 0,
-              display: 'block'
-            }).animate({
-              paddingTop: "+=20px", 
-              opacity: 1
-            }, 1100);
-            scrolledOther = true;
-          }
-        });
-        
-        $('.hand').hover(function() {
-          doBounce($(".hand"), 2, '10px', 100);   
-        });
-
-        function doBounce(element, times, distance, speed) {
-          for(i = 0; i < times; i++) {
-            element.animate({paddingTop: '-='+distance},speed)
-            .animate({paddingTop: '+='+distance},speed);
-          }        
-        }
-        
-        
-      });        
-        
-    </script>
   </head>
     
   <body data-spy="scroll" data-target="#myNavbar">
@@ -201,6 +40,7 @@
             <li><a href="#gallery">GALLERY</a></li>
           <li><a href="#contact">CONTACT ME</a></li>
         </ul>
+        <i class="fa fa-bars" id="pull"></i>
       </div>
     </nav>
 
@@ -408,44 +248,68 @@
     <div class="photos">
       <div class="row">
         <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/1931355_46768656837_4517_n.jpg?oh=1555b5b6f274ff906da119b9c432f716&oe=56A3058F" class="img-thumbnail" class="img-thumbnail">
+          <a href="images/sikkim.jpg" data-lightbox="gallery" data-title="Mural Painting at Sikkim">
+            <img src="images/sikkim.jpg" class="img-thumbnail">
+          </a>
         </div>
         <div class="col-md-3">
-          <img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1931355_46768566837_836_n.jpg?oh=5d56abf59dcd97c00a70a59f9bf5ad59&oe=56661582&__gda__=1452896821_6095a624034f5af51cba01fe608ce9cd" class="img-thumbnail">
+          <a href="images/teaching at sikkim.jpg" data-lightbox="gallery" data-title="Teaching Sanitation at a local school">
+            <img src="images/teaching at sikkim.jpg" class="img-thumbnail">
+          </a>
         </div>
         <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/1931355_46768711837_7780_n.jpg?oh=d3d3f911ffc90add056795d91810a199&oe=56647B71" class="img-thumbnail">
+          <a href="images/peak%20goecha%20la.jpg" data-lightbox="gallery" data-title="Peak of the Goecha-la Trail">
+            <img src="images/peak%20goecha%20la.jpg" class="img-thumbnail">
+          </a>
         </div>
         <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/1931355_46768546837_9990_n.jpg?oh=50378a04abc8967b6d31b4563f6a8a96&oe=56600B05" class="img-thumbnail">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/1500_10151517788217690_1645693218_n.jpg?oh=bbf8027f0cae7f5811f2b6e8b4835123&oe=565D75E9&__gda__=1454093880_54250fa26e5c5c4bdb89c11558a31039" class="img-thumbnail">
-        </div>
-        <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/1014347_10151983114628238_2008024293_n.jpg?oh=2fcb06d402e2c6c3d111d9756fa75a83&oe=56666B6D" class="img-thumbnail">
-        </div>
-        <div class="col-md-3">
-          <img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/1002479_10151613005057655_1473773991_n.jpg?oh=093f6c47c9fd351af34091f66977e666&oe=56615050&__gda__=1449289786_9d77c598c36003cb0c7dcfa5ae7c4799" class="img-thumbnail">
-        </div>
-        <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xpf1/v/l/t1.0-9/10430867_10152574595951838_336151506259311962_n.jpg?oh=d2de406e916748aa5073cc464a42adfe&oe=56A6F7F9" class="img-thumbnail">
+          <a href="images/labor%20work.jpg" data-lightbox="gallery" data-title="Helping in constructing a toilet for the natives">  
+            <img src="images/labor%20work.jpg" class="img-thumbnail">
+          </a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-3">
-          <img src="https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-0/q83/p206x206/11388_10153289426362744_1411875800184900438_n.jpg?oh=677332134dc3f5799384bfc0ae0ed02e&oe=56AA3536&__gda__=1453387260_20bc8c76d61a55e7b37a6bb572fe2ca2" class="img-thumbnail">
+          <a href="images/Engin%20camp.jpg" data-lightbox="gallery" data-title="Engin Camp sub-OG group">
+            <img src="images/Engin%20camp.jpg" class="img-thumbnail">
+          </a>
         </div>
         <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/11265001_10153056492939355_5462715531260675408_n.jpg?oh=52659865e2028542fece9a34780be275&oe=569FA1B0" class="img-thumbnail">
+          <a href="images/Sports%20Camp.jpg" data-lightbox="gallery" data-title="Sports Camp sub-OG group">
+            <img src="images/Sports%20Camp.jpg" class="img-thumbnail">
+          </a>
         </div>
         <div class="col-md-3">
-          <img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/11146272_10153303193589382_7434110223560515351_n.jpg?oh=b1617276a2a0a87b7bbfb78325789738&oe=566394AD" class="img-thumbnail">
+          <a href="images/ISE%20Camp.jpg" data-lightbox="gallery" data-title="Teaching cheer to ISE Camp sub-OG">
+            <img src="images/ISE%20Camp.jpg" class="img-thumbnail">
+          </a>
         </div>
         <div class="col-md-3">
-          <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/11096546_10205144441663973_3133976172153826523_n.jpg?oh=86d57bc15e3d0eb1d709762522387eaf&oe=565EAB53&__gda__=1453908158_631e8fa8b97d178edf2ee60b8e48e54f" class="img-thumbnail">
+          <a href="images/intern%20at%20Micron.jpg" data-lightbox="gallery" data-title="Internship at Micron">
+            <img src="images/intern%20at%20Micron.jpg" class="img-thumbnail">
+        </a>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <a href="images/Konigsee%20at%20Munich.jpg" data-lightbox="gallery" data-title="At the King's Lake at Munich, Germany">
+            <img src="images/Konigsee%20at%20Munich.jpg" class="img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="images/bbq%20at%20exchange.jpg" data-lightbox="gallery" data-title="BBQ session together during exchange">
+            <img src="images/bbq%20at%20exchange.jpg" class="img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="images/Reykjavik%20group%20photo.jpg" data-lightbox="gallery" data-title="NUS-TUE Exchange Group at Reykjavik, Iceland">
+            <img src="images/Reykjavik%20group%20photo.jpg" class="img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="images/exchange%20friends.jpg" data-lightbox="gallery" data-title="International Friends during exchange">
+            <img src="images/exchange%20friends.jpg" class="img-thumbnail">
+          </a>
         </div>
       </div>
     </div>
@@ -478,8 +342,173 @@
     </div>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery-1.11.3.js"></script>
+    <script src="lightbox.js"></script>
+    
+    <script type="text/javascript">      
+      $(document).ready(function() {
+        $('a[href^="#"]').on('click', function(event){
+          var target = $( $(this).attr('href') );
+          if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+              }, 1800);
+          }
+        }); 
+        
+        $("#pull").on('click', function() {
+          $(".navbar ul").slideToggle();
+        });
+        
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 600) { 
+            $('.navbar').addClass('opaque'); 
+          } else {
+            $('.navbar').removeClass('opaque');
+          }
+        });
+        
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 200) { 
+            $('.headerContents').fadeOut(600); 
+          } else {
+            $('.headerContents').fadeIn(600);
+          }
+        });
+        
+        var scrolledIntro = false;
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 210 && !scrolledIntro) {
+            $('#aboutMeContent').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              opacity: 1
+            }, 1000);
+            $('#traits').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              opacity: 1
+            }, 1000);
+            $('.introHeader').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.introPara').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingLeft: "+=20px", 
+              opacity: 1
+            }, 1000);
+            scrolledIntro=true;
+          }
+        });
+        
+        var scrolledSchool = false;
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 1300 && !scrolledSchool) {
+            $('.schoolHeaders').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.schoolContents').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              opacity: 1
+            }, 1000);
+            $('.schoolPara').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingLeft: "+=20px", 
+              opacity: 1
+            }, 1000);
+            scrolledSchool=true;
+          }
+        });
+        
+        var scrolledWork = false;
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 2000 && !scrolledWork) {
+            $('.workHeaders').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingRight: "+=20px", 
+              opacity: 1
+            }, 1000);
+            $('.workContents').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              opacity: 1
+            }, 1000);
+            $('.workPara').css({
+              opacity: 0,
+              display: 'inline-block'
+            }).animate({
+              paddingLeft: "+=20px", 
+              opacity: 1
+            }, 1000);
+            scrolledWork=true;
+          }
+        });
+        
+        var scrolledProg = false;
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 4200 && !scrolledProg){
+            $('#ProgHeader').fadeIn(1200);
+            $('#ProgContainer').css({
+              opacity: 0,
+              display: 'block'
+            }).animate({
+              paddingTop: "+=20px", 
+              opacity: 1
+            }, 1100);
+            scrolledProg = true;
+          }
+        });
+        
+        var scrolledOther = false;
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 4700 && !scrolledOther){
+            $('#OtherHeader').fadeIn(1200);
+            $('#OtherContainer').css({
+              opacity: 0,
+              display: 'block'
+            }).animate({
+              paddingTop: "+=20px", 
+              opacity: 1
+            }, 1100);
+            scrolledOther = true;
+          }
+        });
+        
+        $('.hand').hover(function() {
+          doBounce($(".hand"), 2, '10px', 100);   
+        });
+
+        function doBounce(element, times, distance, speed) {
+          for(i = 0; i < times; i++) {
+            element.animate({paddingTop: '-='+distance},speed)
+            .animate({paddingTop: '+='+distance},speed);
+          }        
+        }
+      });  
+    </script>
+    
   </body>
 </html>
